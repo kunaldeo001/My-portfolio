@@ -5,7 +5,7 @@ import { portfolioData } from '@/lib/portfolio-data';
 
 export function Footer() {
   return (
-    <footer className="bg-card border-t">
+    <footer className="bg-card/80 backdrop-blur-sm border-t">
       <div className="container mx-auto flex flex-col items-center justify-between gap-4 px-4 py-8 sm:flex-row">
         <p className="text-sm text-muted-foreground">&copy; {new Date().getFullYear()} {portfolioData.name}. All rights reserved.</p>
         <div className="flex items-center gap-2">

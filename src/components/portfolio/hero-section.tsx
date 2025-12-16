@@ -12,7 +12,7 @@ export function HeroSection() {
   const avatarImage = PlaceHolderImages.find((img) => img.id === 'kunal-deo-avatar');
   
   return (
-    <section id="home" className="relative flex items-center justify-center overflow-hidden bg-card pt-32 pb-20">
+    <section id="home" className="relative flex items-center justify-center overflow-hidden bg-transparent pt-32 pb-20">
       <div className="container relative z-20 mx-auto px-4 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

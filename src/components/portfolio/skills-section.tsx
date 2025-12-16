@@ -46,7 +46,7 @@ export function SkillsSection() {
               viewport={{ once: true }}
               variants={cardVariants}
             >
-              <Card className="flex h-full flex-col shadow-lg transition-shadow duration-300 hover:shadow-xl">
+              <Card className="flex h-full flex-col shadow-lg transition-shadow duration-300 hover:shadow-xl bg-card/80 backdrop-blur-sm">
                 <CardHeader className="flex-row items-center gap-4">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
                     <Icon className="h-6 w-6" />

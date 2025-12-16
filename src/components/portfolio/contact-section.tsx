@@ -41,7 +41,7 @@ export function ContactSection() {
   }
 
   return (
-    <SectionWrapper id="contact" className="bg-card">
+    <SectionWrapper id="contact" className="bg-card/80 backdrop-blur-sm">
       <div className="text-center">
         <SectionHeading>{contactData.title}</SectionHeading>
         <SectionDescription className="mt-4">{contactData.description}</SectionDescription>
@@ -54,7 +54,7 @@ export function ContactSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <Card className="h-full">
+          <Card className="h-full bg-transparent">
             <CardHeader>
                 <CardTitle>Contact Information</CardTitle>
             </CardHeader>

@@ -6,7 +6,7 @@ import { aboutData } from '@/lib/portfolio-data';
 
 export function AboutSection() {
   return (
-    <SectionWrapper id="about" className="bg-card">
+    <SectionWrapper id="about" className="bg-card/80 backdrop-blur-sm">
       <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
