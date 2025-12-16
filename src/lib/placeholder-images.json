@@ -3,7 +3,7 @@
     {
       "id": "kunal-deo-avatar",
       "description": "A professional headshot of Kunal Deo.",
-      "imageUrl": "https://images.unsplash.com/photo-1652471943570-f3590a4e52ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdHxlbnwwfHx8fDE3NjU3ODkzMjd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://storage.googleapis.com/aif-stg-bucket/projects/1774906939627/d9c02ff3-8321-4f11-a83d-3b5a15328904_iu.jpeg",
       "imageHint": "professional headshot"
     },
     {
@@ -27,7 +27,7 @@
     {
       "id": "hero-background",
       "description": "A vibrant, abstract wallpaper with flowing colors.",
-      "imageUrl": "https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?q=80&w=1920&auto=format&fit=crop",
+      "imageUrl": "https://storage.googleapis.com/aif-stg-bucket/projects/1774906939627/c38a168a-a48f-4ae8-80ac-222a763c3734_vT4rfw.jpg",
       "imageHint": "abstract wallpaper"
     }
   ]
