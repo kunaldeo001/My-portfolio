@@ -31,15 +31,11 @@ export function LandingPage() {
           transition={{ duration: 0.8 }}
         >
           <p className="mb-4 text-sm uppercase tracking-[0.2em] text-muted-foreground">Welcome to my portfolio</p>
-          <h1 className="font-headline text-5xl font-bold tracking-tight text-foreground sm:text-6xl md:text-7xl">
-            {portfolioData.firstName}
-          </h1>
-          <h2 
-            className="font-headline text-6xl font-bold tracking-tight text-primary sm:text-7xl md:text-8xl"
-            style={{ textShadow: '0 0 15px hsl(var(--primary) / 0.8)'}}
+          <h1 className="font-headline text-6xl font-bold tracking-tight text-foreground sm:text-7xl md:text-8xl"
+              style={{ textShadow: '0 0 10px hsl(var(--primary) / 0.5), 0 0 20px hsl(var(--primary) / 0.3)'}}
           >
-            {portfolioData.lastName}
-          </h2>
+            <span className="text-primary">{portfolioData.firstName}</span> {portfolioData.lastName}
+          </h1>
           <p className="mt-6 text-sm uppercase tracking-widest text-muted-foreground sm:text-base">
             {heroData.title}
           </p>
