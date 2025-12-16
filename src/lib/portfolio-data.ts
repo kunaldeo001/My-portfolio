@@ -1,6 +1,8 @@
 
 export const portfolioData = {
-  name: 'Kunal Deo',
+  name: 'Sai Harshith Moluguri',
+  firstName: 'Sai Harshith',
+  lastName: 'Moluguri',
   email: 'kunaldeo001@gmail.com',
   resumeUrl: '/resume.pdf', // Assuming resume is in public folder
   socials: {
@@ -20,7 +22,7 @@ export const navLinks = [
 ];
 
 export const heroData = {
-  title: 'Aspiring Software Engineer',
+  title: 'WEB DEVELOPER - UI ENGINEER - AI-ML ENTHUSIAST',
   introduction: 'A curious and driven second-year Computer Science student with a passion for building innovative software solutions and exploring the frontiers of technology.',
 };
 

@@ -1,6 +1,5 @@
 "use client";
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
@@ -11,22 +10,9 @@ import { Download, Mail } from 'lucide-react';
 
 export function HeroSection() {
   const avatarImage = PlaceHolderImages.find((img) => img.id === 'kunal-deo-avatar');
-  const heroBgImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
-
+  
   return (
-    <section id="home" className="relative flex min-h-screen items-center justify-center overflow-hidden bg-background">
-      {heroBgImage && (
-        <Image
-          src={heroBgImage.imageUrl}
-          alt="Anime wallpaper background"
-          fill
-          className="absolute z-0 object-cover opacity-20"
-          priority
-          data-ai-hint={heroBgImage.imageHint}
-        />
-      )}
-      <div className="absolute inset-0 z-10 bg-gradient-to-t from-background via-background/50 to-transparent"></div>
-      
+    <section id="home" className="relative flex items-center justify-center overflow-hidden bg-card pt-32 pb-20">
       <div className="container relative z-20 mx-auto px-4 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -43,9 +29,6 @@ export function HeroSection() {
           <h1 className="font-headline text-4xl font-bold tracking-tight text-primary sm:text-5xl md:text-6xl">
             {portfolioData.name}
           </h1>
-          <p className="mt-3 font-headline text-lg text-foreground sm:text-xl md:text-2xl">
-            {heroData.title}
-          </p>
           <p className="mx-auto mt-6 max-w-2xl text-base text-muted-foreground sm:text-lg">
             {heroData.introduction}
           </p>

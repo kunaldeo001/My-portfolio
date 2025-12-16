@@ -2,15 +2,19 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Github, Linkedin, Menu, X } from 'lucide-react';
+import { Github, Linkedin, Menu, X, Home } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
 import { navLinks, portfolioData } from '@/lib/portfolio-data';
+import { usePathname } from 'next/navigation';
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+  
+  const isPortfolioPage = pathname === '/portfolio';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,6 +46,10 @@ export function Header() {
     </nav>
   );
 
+  if (!isPortfolioPage) {
+    return null;
+  }
+
   return (
     <header
       className={cn(
@@ -50,8 +58,9 @@ export function Header() {
       )}
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <Link href="/" className="font-headline text-xl font-bold text-primary">
-          {portfolioData.name}.dev
+        <Link href="/" className="font-headline text-xl font-bold text-primary flex items-center gap-2">
+          <Home className="h-5 w-5" />
+          <span className="hidden sm:inline">Home</span>
         </Link>
         <div className="flex-1 flex justify-center">
             <NavLinks />
@@ -79,8 +88,9 @@ export function Header() {
             <SheetContent side="right" className="w-[80vw]">
                 <div className="flex flex-col h-full">
                   <div className="flex justify-between items-center p-4 border-b">
-                      <Link href="/" className="font-headline text-xl font-bold text-primary" onClick={() => setIsMobileMenuOpen(false)}>
-                        {portfolioData.name}.dev
+                      <Link href="/" className="font-headline text-xl font-bold text-primary flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
+                        <Home className="h-5 w-5" />
+                        Home
                       </Link>
                       <SheetClose asChild>
                         <Button variant="ghost" size="icon">
