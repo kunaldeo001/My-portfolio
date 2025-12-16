@@ -14,9 +14,12 @@ export default function PortfolioPage() {
   const heroBgImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
   return (
     <div 
-      className="flex min-h-screen flex-col bg-background bg-cover bg-fixed"
-      style={{ backgroundImage: heroBgImage ? `url(${heroBgImage.imageUrl})` : 'none' }}
+      className="flex min-h-screen flex-col bg-background"
     >
+      <div 
+        className="fixed inset-0 z-0 bg-cover bg-fixed"
+        style={{ backgroundImage: heroBgImage ? `url(${heroBgImage.imageUrl})` : 'none' }}
+      ></div>
       <div className="absolute inset-0 z-0 bg-background/80 backdrop-blur-sm"></div>
       <div className="relative z-10">
         <Header />

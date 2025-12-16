@@ -26,9 +26,9 @@
     },
     {
       "id": "hero-background",
-      "description": "An anime-style scene of a boy watching a meteor shower.",
+      "description": "A vibrant, abstract wallpaper with flowing colors.",
       "imageUrl": "https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?q=80&w=1920&auto=format&fit=crop",
-      "imageHint": "anime stars"
+      "imageHint": "abstract wallpaper"
     }
   ]
 }

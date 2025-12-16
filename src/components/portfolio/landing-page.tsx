@@ -13,16 +13,28 @@ export function LandingPage() {
   return (
     <section id="home" className="relative flex min-h-screen items-center justify-center overflow-hidden bg-background">
       {heroBgImage && (
-        <Image
-          src={heroBgImage.imageUrl}
-          alt="An anime-style scene of a boy watching a meteor shower."
-          fill
-          className="absolute z-0 object-cover opacity-50"
-          priority
-          data-ai-hint={heroBgImage.imageHint}
-        />
+        <motion.div
+          className="absolute z-0 h-full w-full"
+          initial={{ scale: 1 }}
+          animate={{ scale: 1.05 }}
+          transition={{
+            duration: 15,
+            ease: 'easeInOut',
+            repeat: Infinity,
+            repeatType: 'mirror',
+          }}
+        >
+          <Image
+            src={heroBgImage.imageUrl}
+            alt={heroBgImage.description}
+            fill
+            className="object-cover"
+            priority
+            data-ai-hint={heroBgImage.imageHint}
+          />
+        </motion.div>
       )}
-      <div className="absolute inset-0 z-10 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
+      <div className="absolute inset-0 z-10 bg-background/60 backdrop-blur-sm"></div>
       
       <div className="container relative z-20 mx-auto px-4 text-center">
         <motion.div
@@ -32,9 +44,13 @@ export function LandingPage() {
         >
           <p className="mb-4 text-sm uppercase tracking-[0.2em] text-muted-foreground">Welcome to my portfolio</p>
           <h1 className="font-headline text-6xl font-bold tracking-tight text-foreground sm:text-7xl md:text-8xl"
-              style={{ textShadow: '0 0 10px hsl(var(--primary) / 0.5), 0 0 20px hsl(var(--primary) / 0.3)'}}
+              style={{ textShadow: '0 2px 20px hsl(var(--background) / 0.8)'}}
           >
-            <span className="text-primary">{portfolioData.firstName}</span> {portfolioData.lastName}
+            <span 
+              className="bg-gradient-to-br from-primary via-primary/80 to-foreground bg-clip-text text-transparent"
+            >
+              {portfolioData.firstName}
+            </span> {portfolioData.lastName}
           </h1>
           <p className="mt-6 text-sm uppercase tracking-widest text-muted-foreground sm:text-base">
             {heroData.title}
