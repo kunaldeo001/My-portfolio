@@ -19,7 +19,7 @@ export function EducationSection() {
         transition={{ duration: 0.5 }}
         className="mt-12"
       >
-        <Card className="max-w-2xl mx-auto shadow-lg">
+        <Card className="max-w-3xl mx-auto shadow-lg">
           <CardContent className="p-8">
             <div className="flex items-center gap-6">
               <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">

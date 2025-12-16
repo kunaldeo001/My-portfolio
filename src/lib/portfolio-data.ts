@@ -19,7 +19,7 @@ export const navLinks = [
 
 export const heroData = {
   title: 'Aspiring Software Engineer',
-  introduction: 'A curious and driven second-year Computer Science student with a passion for building innovative software solutions and exploring the frontiers of technology.',
+  introduction: 'A curious and driven first-year Computer Science student with a passion for building innovative software solutions and exploring the frontiers of technology.',
 };
 
 export const aboutData = {
@@ -107,10 +107,10 @@ export const projectsData = {
 
 export const educationData = {
   title: 'Education',
-  degree: "Bachelor's in Computer Science",
-  university: '[Your University Name]',
-  duration: '2022 - 2026',
-  year: 'Second Year Undergraduate',
+  degree: "B.Tech in Computer Science (Core)",
+  university: 'SRM Institute of Science and Technology, Kattankulathur, Chennai',
+  duration: '2024 - 2028',
+  year: 'First Year Undergraduate',
 };
 
 export const certificationsData = {

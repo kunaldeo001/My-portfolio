@@ -14,10 +14,19 @@ export function HeroSection() {
 
   return (
     <section id="home" className="relative flex min-h-screen items-center justify-center overflow-hidden bg-background">
-      <div className="absolute inset-0 z-0 opacity-5">
-        <div className="absolute h-full w-full bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
-      </div>
-      <div className="container relative z-10 mx-auto px-4 text-center">
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute z-0 w-full h-full object-cover opacity-20"
+      >
+        <source src="/anime-background.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div className="absolute inset-0 z-10 bg-gradient-to-t from-background via-background/50 to-transparent"></div>
+      
+      <div className="container relative z-20 mx-auto px-4 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -47,7 +56,7 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
         >
-          <Button size="lg" asChild className="bg-primary hover:bg-primary/90">
+          <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
             <Link href={portfolioData.resumeUrl} target="_blank">
               <Download className="mr-2 h-5 w-5" />
               Download CV
