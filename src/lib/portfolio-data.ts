@@ -1,8 +1,8 @@
 
 export const portfolioData = {
-  name: 'Sai Harshith Moluguri',
-  firstName: 'Sai Harshith',
-  lastName: 'Moluguri',
+  name: 'Kunal Deo',
+  firstName: 'Kunal',
+  lastName: 'Deo',
   email: 'kunaldeo001@gmail.com',
   resumeUrl: '/resume.pdf', // Assuming resume is in public folder
   socials: {
