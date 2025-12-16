@@ -66,10 +66,6 @@ export function ContactSection() {
                     <Mail className="h-5 w-5 text-primary" />
                     <a href={`mailto:${portfolioData.email}`} className="hover:text-primary">{portfolioData.email}</a>
                 </div>
-                 <div className="flex items-center gap-4">
-                    <Phone className="h-5 w-5 text-primary" />
-                    <span>+1 (555) 123-4567</span>
-                </div>
             </CardContent>
           </Card>
         </motion.div>
