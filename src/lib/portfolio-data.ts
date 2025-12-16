@@ -19,7 +19,7 @@ export const navLinks = [
 
 export const heroData = {
   title: 'Aspiring Software Engineer',
-  introduction: 'A curious and driven first-year Computer Science student with a passion for building innovative software solutions and exploring the frontiers of technology.',
+  introduction: 'A curious and driven second-year Computer Science student with a passion for building innovative software solutions and exploring the frontiers of technology.',
 };
 
 export const aboutData = {
@@ -110,7 +110,7 @@ export const educationData = {
   degree: "B.Tech in Computer Science (Core)",
   university: 'SRM Institute of Science and Technology, Kattankulathur, Chennai',
   duration: '2024 - 2028',
-  year: 'First Year Undergraduate',
+  year: 'Second Year Undergraduate',
 };
 
 export const certificationsData = {
