@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { heroData, portfolioData } from '@/lib/portfolio-data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Download, Mail } from 'lucide-react';
+import { Mail } from 'lucide-react';
 
 export function HeroSection() {
   const avatarImage = PlaceHolderImages.find((img) => img.id === 'kunal-deo-avatar');
@@ -40,12 +40,6 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
         >
-          <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
-            <Link href={portfolioData.resumeUrl} target="_blank">
-              <Download className="mr-2 h-5 w-5" />
-              Download CV
-            </Link>
-          </Button>
           <Button size="lg" variant="outline" asChild>
             <Link href={`mailto:${portfolioData.email}`}>
               <Mail className="mr-2 h-5 w-5" />
