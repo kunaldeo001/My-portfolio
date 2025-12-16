@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
+import { Github, Linkedin, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
@@ -53,7 +53,21 @@ export function Header() {
         <Link href="/" className="font-headline text-xl font-bold text-primary">
           {portfolioData.name}.dev
         </Link>
-        <NavLinks />
+        <div className="flex-1 flex justify-center">
+            <NavLinks />
+        </div>
+        <div className="hidden md:flex items-center gap-2">
+            <Button variant="ghost" size="icon" asChild>
+                <Link href={portfolioData.socials.github} target="_blank" aria-label="GitHub">
+                <Github className="h-5 w-5" />
+                </Link>
+            </Button>
+            <Button variant="ghost" size="icon" asChild>
+                <Link href={portfolioData.socials.linkedin} target="_blank" aria-label="LinkedIn">
+                <Linkedin className="h-5 w-5" />
+                </Link>
+            </Button>
+        </div>
         <div className="md:hidden">
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild>
@@ -76,6 +90,18 @@ export function Header() {
                       </SheetClose>
                   </div>
                   <NavLinks isMobile={true} />
+                  <div className="p-4 mt-auto flex items-center gap-2 justify-center">
+                    <Button variant="ghost" size="icon" asChild>
+                        <Link href={portfolioData.socials.github} target="_blank" aria-label="GitHub">
+                        <Github className="h-6 w-6" />
+                        </Link>
+                    </Button>
+                    <Button variant="ghost" size="icon" asChild>
+                        <Link href={portfolioData.socials.linkedin} target="_blank" aria-label="LinkedIn">
+                        <Linkedin className="h-6 w-6" />
+                        </Link>
+                    </Button>
+                  </div>
                 </div>
             </SheetContent>
           </Sheet>
