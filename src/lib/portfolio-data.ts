@@ -3,8 +3,8 @@ export const portfolioData = {
   email: 'kunal.deo@example.com',
   resumeUrl: '/resume.pdf', // Assuming resume is in public folder
   socials: {
-    github: 'https://github.com/kunaldeo',
-    linkedin: 'https://linkedin.com/in/kunaldeo',
+    github: 'https://github.com/kunaldeo001',
+    linkedin: 'https://www.linkedin.com/in/kunal-deo-4592352bb/',
   },
 };
 
