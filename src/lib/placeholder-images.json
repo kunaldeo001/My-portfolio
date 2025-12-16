@@ -1,3 +1,28 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "kunal-deo-avatar",
+      "description": "A professional headshot of Kunal Deo.",
+      "imageUrl": "https://images.unsplash.com/photo-1652471943570-f3590a4e52ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdHxlbnwwfHx8fDE3NjU3ODkzMjd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional headshot"
+    },
+    {
+      "id": "project-1",
+      "description": "Placeholder image for the first project.",
+      "imageUrl": "https://images.unsplash.com/photo-1579389083395-4507e98b5e67?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx0ZWNoJTIwcHJvamVjdHxlbnwwfHx8fDE3NjU4MTAzMDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "tech project"
+    },
+    {
+      "id": "project-2",
+      "description": "Placeholder image for the second project.",
+      "imageUrl": "https://images.unsplash.com/photo-1764557222271-9d0556161d35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzb2Z0d2FyZSUyMGludGVyZmFjZXxlbnwwfHx8fDE3NjU3OTczNzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "software interface"
+    },
+    {
+      "id": "project-3",
+      "description": "Placeholder image for the third project.",
+      "imageUrl": "https://images.unsplash.com/photo-1753998943413-8cba1b923c0e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjb2RlJTIwc2NyZWVufGVufDB8fHx8MTc2NTg1MTE5MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "code screen"
+    }
+  ]
 }
