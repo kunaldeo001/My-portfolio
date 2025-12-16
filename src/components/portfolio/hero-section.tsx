@@ -6,10 +6,37 @@ import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { heroData, portfolioData } from '@/lib/portfolio-data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Mail } from 'lucide-react';
+import { Mail, Pencil } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
 
 export function HeroSection() {
-  const avatarImage = PlaceHolderImages.find((img) => img.id === 'kunal-deo-avatar');
+  const initialAvatar = PlaceHolderImages.find((img) => img.id === 'kunal-deo-avatar');
+  const [avatarUrl, setAvatarUrl] = useState(initialAvatar?.imageUrl);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    const savedAvatar = localStorage.getItem('customAvatar');
+    if (savedAvatar) {
+      setAvatarUrl(savedAvatar);
+    }
+  }, []);
+
+  const handleAvatarChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (event.target.files && event.target.files[0]) {
+      const file = event.target.files[0];
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const newAvatarUrl = e.target?.result as string;
+        setAvatarUrl(newAvatarUrl);
+        localStorage.setItem('customAvatar', newAvatarUrl);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const handleEditClick = () => {
+    fileInputRef.current?.click();
+  };
   
   return (
     <section id="home" className="relative flex items-center justify-center overflow-hidden bg-transparent pt-32 pb-20">
@@ -19,12 +46,28 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          {avatarImage && (
-            <Avatar className="mx-auto mb-6 h-32 w-32 border-4 border-primary/20 shadow-lg">
-              <AvatarImage src={avatarImage.imageUrl} alt={portfolioData.name} data-ai-hint={avatarImage.imageHint} />
+          <div className="relative mx-auto mb-6 h-32 w-32 group">
+            <Avatar className="h-full w-full border-4 border-primary/20 shadow-lg">
+              <AvatarImage src={avatarUrl} alt={portfolioData.name} data-ai-hint={initialAvatar?.imageHint} />
               <AvatarFallback>{portfolioData.name.charAt(0)}</AvatarFallback>
             </Avatar>
-          )}
+            <input
+              type="file"
+              ref={fileInputRef}
+              onChange={handleAvatarChange}
+              className="hidden"
+              accept="image/*"
+            />
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={handleEditClick}
+              className="absolute bottom-0 right-0 z-10 rounded-full h-8 w-8 opacity-0 group-hover:opacity-100 transition-opacity"
+              aria-label="Change profile picture"
+            >
+              <Pencil className="h-4 w-4" />
+            </Button>
+          </div>
 
           <h1 className="font-headline text-4xl font-bold tracking-tight text-primary sm:text-5xl md:text-6xl">
             {portfolioData.name}
