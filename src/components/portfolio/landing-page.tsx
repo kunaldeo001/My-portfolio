@@ -6,13 +6,41 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { heroData, portfolioData } from '@/lib/portfolio-data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { useState, useEffect, useRef } from 'react';
+import { Pencil } from 'lucide-react';
 
 export function LandingPage() {
   const heroBgImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
+  const [wallpaper, setWallpaper] = useState(heroBgImage?.imageUrl);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    const savedWallpaper = localStorage.getItem('customWallpaper');
+    if (savedWallpaper) {
+      setWallpaper(savedWallpaper);
+    }
+  }, []);
+
+  const handleWallpaperChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (event.target.files && event.target.files[0]) {
+      const file = event.target.files[0];
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const newWallpaperUrl = e.target?.result as string;
+        setWallpaper(newWallpaperUrl);
+        localStorage.setItem('customWallpaper', newWallpaperUrl);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const handleEditClick = () => {
+    fileInputRef.current?.click();
+  };
 
   return (
     <section id="home" className="relative flex min-h-screen items-center justify-center overflow-hidden bg-background">
-      {heroBgImage && (
+      {wallpaper && (
         <motion.div
           className="absolute z-0 h-full w-full"
           initial={{ scale: 1 }}
@@ -25,12 +53,13 @@ export function LandingPage() {
           }}
         >
           <Image
-            src={heroBgImage.imageUrl}
-            alt={heroBgImage.description}
+            src={wallpaper}
+            alt={heroBgImage?.description || "Portfolio background"}
             fill
             className="object-cover"
             priority
-            data-ai-hint={heroBgImage.imageHint}
+            data-ai-hint={heroBgImage?.imageHint}
+            key={wallpaper}
           />
         </motion.div>
       )}
@@ -70,6 +99,23 @@ export function LandingPage() {
           </Button>
         </motion.div>
       </div>
+
+      <input
+        type="file"
+        ref={fileInputRef}
+        onChange={handleWallpaperChange}
+        className="hidden"
+        accept="image/*"
+      />
+      <Button
+        variant="outline"
+        size="icon"
+        onClick={handleEditClick}
+        className="absolute bottom-4 right-4 z-20"
+        aria-label="Change wallpaper"
+      >
+        <Pencil className="h-5 w-5" />
+      </Button>
     </section>
   );
 }
