@@ -11,19 +11,20 @@ import { Download, Mail } from 'lucide-react';
 
 export function HeroSection() {
   const avatarImage = PlaceHolderImages.find((img) => img.id === 'kunal-deo-avatar');
+  const heroBgImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
 
   return (
     <section id="home" className="relative flex min-h-screen items-center justify-center overflow-hidden bg-background">
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute z-0 w-full h-full object-cover opacity-20"
-      >
-        <source src="/anime-background.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      {heroBgImage && (
+        <Image
+          src={heroBgImage.imageUrl}
+          alt="Anime wallpaper background"
+          fill
+          className="absolute z-0 object-cover opacity-20"
+          priority
+          data-ai-hint={heroBgImage.imageHint}
+        />
+      )}
       <div className="absolute inset-0 z-10 bg-gradient-to-t from-background via-background/50 to-transparent"></div>
       
       <div className="container relative z-20 mx-auto px-4 text-center">
