@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from 'next/link';
@@ -15,7 +16,7 @@ export function HeroSection() {
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    const savedAvatar = localStorage.getItem('customAvatar');
+    const savedAvatar = sessionStorage.getItem('customAvatar');
     if (savedAvatar) {
       setAvatarUrl(savedAvatar);
     }
@@ -28,7 +29,11 @@ export function HeroSection() {
       reader.onload = (e) => {
         const newAvatarUrl = e.target?.result as string;
         setAvatarUrl(newAvatarUrl);
-        localStorage.setItem('customAvatar', newAvatarUrl);
+        try {
+          sessionStorage.setItem('customAvatar', newAvatarUrl);
+        } catch (error) {
+          console.error("Failed to save avatar to sessionStorage:", error);
+        }
       };
       reader.readAsDataURL(file);
     }

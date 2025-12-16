@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from 'next/image';
@@ -15,7 +16,7 @@ export function LandingPage() {
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    const savedWallpaper = localStorage.getItem('customWallpaper');
+    const savedWallpaper = sessionStorage.getItem('customWallpaper');
     if (savedWallpaper) {
       setWallpaper(savedWallpaper);
     }
@@ -28,7 +29,11 @@ export function LandingPage() {
       reader.onload = (e) => {
         const newWallpaperUrl = e.target?.result as string;
         setWallpaper(newWallpaperUrl);
-        localStorage.setItem('customWallpaper', newWallpaperUrl);
+        try {
+          sessionStorage.setItem('customWallpaper', newWallpaperUrl);
+        } catch (error) {
+          console.error("Failed to save wallpaper to sessionStorage:", error);
+        }
       };
       reader.readAsDataURL(file);
     }

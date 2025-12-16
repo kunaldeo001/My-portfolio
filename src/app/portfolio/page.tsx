@@ -1,3 +1,4 @@
+
 "use client";
 
 import { Header } from '@/components/portfolio/header';
@@ -18,7 +19,7 @@ export default function PortfolioPage() {
   const [wallpaper, setWallpaper] = useState(heroBgImage?.imageUrl);
 
   useEffect(() => {
-    const savedWallpaper = localStorage.getItem('customWallpaper');
+    const savedWallpaper = sessionStorage.getItem('customWallpaper');
     if (savedWallpaper) {
       setWallpaper(savedWallpaper);
     }
