@@ -1,0 +1,133 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { SectionWrapper, SectionHeading, SectionDescription } from "./section";
+import { contactData, portfolioData } from "@/lib/portfolio-data";
+import { useToast } from "@/hooks/use-toast";
+import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
+import { Mail, Phone } from "lucide-react";
+
+const formSchema = z.object({
+  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
+  email: z.string().email({ message: "Please enter a valid email address." }),
+  message: z.string().min(10, { message: "Message must be at least 10 characters." }),
+});
+
+export function ContactSection() {
+  const { toast } = useToast();
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      message: "",
+    },
+  });
+
+  function onSubmit(values: z.infer<typeof formSchema>) {
+    console.log(values);
+    toast({
+      title: "Message Sent!",
+      description: "Thanks for reaching out. I'll get back to you soon.",
+    });
+    form.reset();
+  }
+
+  return (
+    <SectionWrapper id="contact" className="bg-card">
+      <div className="text-center">
+        <SectionHeading>{contactData.title}</SectionHeading>
+        <SectionDescription className="mt-4">{contactData.description}</SectionDescription>
+      </div>
+
+      <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-2">
+        <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          <Card className="h-full">
+            <CardHeader>
+                <CardTitle>Contact Information</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4 text-muted-foreground">
+                <p>
+                    Fill up the form and I will get back to you within 24 hours. Or get in touch using the details below.
+                </p>
+                <div className="flex items-center gap-4">
+                    <Mail className="h-5 w-5 text-primary" />
+                    <a href={`mailto:${portfolioData.email}`} className="hover:text-primary">{portfolioData.email}</a>
+                </div>
+                 <div className="flex items-center gap-4">
+                    <Phone className="h-5 w-5 text-primary" />
+                    <span>+1 (555) 123-4567</span>
+                </div>
+            </CardContent>
+          </Card>
+        </motion.div>
+
+        <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+        >
+          <Form {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+              <FormField
+                control={form.control}
+                name="name"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>{contactData.form.name}</FormLabel>
+                    <FormControl>
+                      <Input placeholder="John Doe" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>{contactData.form.email}</FormLabel>
+                    <FormControl>
+                      <Input placeholder="john.doe@example.com" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="message"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>{contactData.form.message}</FormLabel>
+                    <FormControl>
+                      <Textarea placeholder="Your message here..." className="min-h-[120px]" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <Button type="submit" size="lg" className="w-full">
+                {contactData.form.submit}
+              </Button>
+            </form>
+          </Form>
+        </motion.div>
+      </div>
+    </SectionWrapper>
+  );
+}
