@@ -15,9 +15,9 @@ export function LandingPage() {
       {heroBgImage && (
         <Image
           src={heroBgImage.imageUrl}
-          alt="Luxury car on a coastal road at sunset"
+          alt="An anime-style scene of a boy watching a meteor shower."
           fill
-          className="absolute z-0 object-cover opacity-30"
+          className="absolute z-0 object-cover opacity-50"
           priority
           data-ai-hint={heroBgImage.imageHint}
         />
