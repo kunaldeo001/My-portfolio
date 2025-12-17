@@ -126,6 +126,11 @@ export const internshipsData = {
   description: 'My professional experience as a web developer.',
   items: [
     {
+      company: 'DigiSys Innosol Pvt Ltd',
+      role: 'Web Developer Intern',
+      status: 'Ongoing',
+    },
+    {
       company: 'Codeclause',
       role: 'Web Developer Intern',
       status: 'Completed',
@@ -234,3 +239,4 @@ export const contactData = {
         submit: "Send Message",
     },
 };
+

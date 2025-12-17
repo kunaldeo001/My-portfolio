@@ -6,6 +6,7 @@ import { Briefcase } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { SectionWrapper, SectionHeading, SectionDescription } from './section';
 import { internshipsData } from '@/lib/portfolio-data';
+import { Badge } from '../ui/badge';
 
 export function InternshipsSection() {
   return (
@@ -29,9 +30,13 @@ export function InternshipsSection() {
               <div className={`w-full lg:w-1/2 ${index % 2 === 0 ? 'lg:pr-8' : 'lg:pl-8'}`}>
                 <Card className="shadow-lg transition-shadow duration-300 hover:shadow-xl bg-card/80 backdrop-blur-sm">
                   <div className="p-6">
-                    <p className="text-sm text-muted-foreground">{item.company}</p>
-                    <h3 className="font-headline text-lg font-semibold text-primary">{item.role}</h3>
-                    <p className="mt-1 text-sm text-muted-foreground">{item.status}</p>
+                    <div className="flex justify-between items-start">
+                      <div>
+                        <p className="text-sm text-muted-foreground">{item.company}</p>
+                        <h3 className="font-headline text-lg font-semibold text-primary">{item.role}</h3>
+                      </div>
+                      <Badge variant={item.status === 'Ongoing' ? 'default' : 'secondary'}>{item.status}</Badge>
+                    </div>
                   </div>
                 </Card>
               </div>
