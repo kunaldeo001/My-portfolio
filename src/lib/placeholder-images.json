@@ -25,10 +25,16 @@
       "imageHint": "code screen"
     },
     {
+      "id": "project-4",
+      "description": "Placeholder image for the fourth project.",
+      "imageUrl": "https://images.unsplash.com/photo-1536560942313-1530f4653ac3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bGFuZGluZyUyMHBhZ2V8ZW58MHx8fHwxNzY1OTYyMTcwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "landing page"
+    },
+    {
       "id": "hero-background",
-      "description": "A person looking at a starry night sky with shooting stars.",
-      "imageUrl": "https://storage.googleapis.com/aif-stg-bucket/projects/1774906939627/c8d57579-247d-411a-82dc-304ac9067b57_0.png",
-      "imageHint": "night sky"
+      "description": "A stunning view of snowy mountains under a starry night sky with the Milky Way visible.",
+      "imageUrl": "https://storage.googleapis.com/aif-stg-bucket/projects/1774906939627/bbe6d99f-4318-4ac5-807a-c71510255a6d_milky-way-2695569_1280.jpg",
+      "imageHint": "starry mountains"
     }
   ]
 }

@@ -82,30 +82,40 @@ export const projectsData = {
       image: 'project-1',
       tags: ['Next.js', 'React', 'Tailwind CSS', 'TypeScript'],
       links: {
-        github: 'https://github.com/kunaldeo/portfolio',
+        github: 'https://github.com/kunaldeo001/portfolio',
         live: '#',
       },
     },
     {
-      title: 'Task Management App',
-      description: 'A simple web application for managing daily tasks, featuring create, read, update, and delete (CRUD) functionality.',
+      title: 'Finwise AI',
+      description: 'An AI-powered financial advisor application that provides personalized investment advice and market analysis.',
       image: 'project-2',
-      tags: ['Java', 'Spring Boot', 'Thymeleaf', 'MySQL'],
+      tags: ['Python', 'Flask', 'React', 'Machine Learning', 'AI'],
       links: {
-        github: 'https://github.com/kunaldeo/task-manager',
+        github: 'https://github.com/kunaldeo001/finwise-ai',
         live: null,
       },
     },
     {
-      title: 'Data Visualizer',
-      description: 'A Python script that uses Matplotlib and Pandas to parse CSV data and generate insightful charts and graphs.',
+      title: 'Fitness Tracker Dashboard',
+      description: 'A data-rich dashboard to visualize fitness activity, track progress, and set goals, built with modern web technologies.',
       image: 'project-3',
-      tags: ['Python', 'Pandas', 'Matplotlib'],
+      tags: ['React', 'Chart.js', 'Node.js', 'MongoDB'],
       links: {
-        github: 'https://github.com/kunaldeo/data-visualizer',
+        github: 'https://github.com/kunaldeo001/fitness-tracker',
         live: null,
       },
     },
+    {
+      title: 'Responsive Landing Page',
+      description: 'A modern, fully responsive landing page for a fictional SaaS product, focusing on clean design and user experience.',
+      image: 'project-4',
+      tags: ['HTML5', 'CSS3', 'JavaScript', 'Figma'],
+      links: {
+        github: 'https://github.com/kunaldeo001/responsive-landing-page',
+        live: null,
+      },
+    }
   ],
 };
 
