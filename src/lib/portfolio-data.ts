@@ -132,6 +132,51 @@ export const certificationsData = {
   description: 'My commitment to continuous learning is reflected in the certifications and training programs I have undertaken.',
   items: [
     {
+      title: '10X Club',
+      issuer: 'Coding Ninjas',
+      status: 'Completed',
+    },
+    {
+      title: 'Data Analytics Workshop',
+      issuer: 'IIT Kharagpur',
+      status: 'Completed',
+    },
+    {
+      title: 'AI Aware and AI Appreciate',
+      issuer: 'Intel',
+      status: 'Completed',
+    },
+    {
+      title: 'SkillUp: Machine Learning using Python',
+      issuer: 'SkillUp',
+      status: 'Completed',
+    },
+    {
+      title: 'Artificial Intelligence',
+      issuer: 'Infosys',
+      status: 'Completed',
+    },
+    {
+      title: 'Technology Job Simulation',
+      issuer: 'Deloitte',
+      status: 'Completed',
+    },
+    {
+      title: 'Cybersecurity Course',
+      issuer: 'Cisco',
+      status: 'Completed',
+    },
+    {
+      title: 'Digital Skill: Artificial Intelligence',
+      issuer: 'Accenture',
+      status: 'Completed',
+    },
+    {
+      title: 'HP Future-Ready AI Program',
+      issuer: 'HP',
+      status: 'Completed',
+    },
+    {
       title: 'AWS Academy Cloud Foundations',
       issuer: 'EduSkills & AWS Academy',
       status: 'In Progress',
