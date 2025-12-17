@@ -16,8 +16,10 @@ export const navLinks = [
   { href: '#about', label: 'About' },
   { href: '#skills', label: 'Skills' },
   { href: '#projects', label: 'Projects' },
+  { href: '#internships', label: 'Internships' },
   { href: '#education', label: 'Education' },
   { href: '#certifications', label: 'Certifications' },
+  { href: '#clubs', label: 'Clubs' },
   { href: '#contact', label: 'Contact' },
 ];
 
@@ -119,6 +121,23 @@ export const projectsData = {
   ],
 };
 
+export const internshipsData = {
+  title: 'Internships',
+  description: 'My professional experience as a web developer.',
+  items: [
+    {
+      company: 'Codeclause',
+      role: 'Web Developer Intern',
+      status: 'Completed',
+    },
+    {
+      company: 'Codesoft',
+      role: 'Web Developer',
+      status: 'Completed',
+    },
+  ],
+};
+
 export const educationData = {
   title: 'Education',
   degree: "B.Tech in Computer Science (Core)",
@@ -190,6 +209,17 @@ export const certificationsData = {
       title: 'Python for Everybody',
       issuer: 'Coursera',
       status: 'Completed',
+    },
+  ],
+};
+
+export const clubsData = {
+  title: 'Clubs & Organizations',
+  description: 'My involvement in technical clubs and communities.',
+  items: [
+    {
+      name: 'IEEE SRMIST SSIT',
+      role: 'R&D Member',
     },
   ],
 };

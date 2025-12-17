@@ -5,8 +5,10 @@ import { Header } from '@/components/portfolio/header';
 import { AboutSection } from '@/components/portfolio/about-section';
 import { SkillsSection } from '@/components/portfolio/skills-section';
 import { ProjectsSection } from '@/components/portfolio/projects-section';
+import { InternshipsSection } from '@/components/portfolio/internships-section';
 import { EducationSection } from '@/components/portfolio/education-section';
 import { CertificationsSection } from '@/components/portfolio/certifications-section';
+import { ClubsSection } from '@/components/portfolio/clubs-section';
 import { ContactSection } from '@/components/portfolio/contact-section';
 import { Footer } from '@/components/portfolio/footer';
 import { BackToTop } from '@/components/portfolio/back-to-top';
@@ -32,8 +34,10 @@ export default function PortfolioPage() {
           <AboutSection />
           <SkillsSection />
           <ProjectsSection />
+          <InternshipsSection />
           <EducationSection />
           <CertificationsSection />
+          <ClubsSection />
           <ContactSection />
         </main>
         <Footer />
