@@ -1,3 +1,4 @@
+
 "use client";
 
 import { motion } from "framer-motion";
@@ -32,12 +33,20 @@ export function ContactSection() {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+    const subject = encodeURIComponent(`Contact Form Submission from ${values.name}`);
+    const body = encodeURIComponent(
+      `Name: ${values.name}\nEmail: ${values.email}\n\nMessage:\n${values.message}`
+    );
+    const mailtoLink = `mailto:${portfolioData.email}?subject=${subject}&body=${body}`;
+    
+    window.location.href = mailtoLink;
+
     toast({
-      title: "Message Sent!",
-      description: "Thanks for reaching out. I'll get back to you soon.",
+      title: "Opening Email Client",
+      description: "Please complete sending the message in your email application.",
     });
-    form.reset();
+    
+    // We don't reset the form, in case the mailto link fails, user can copy the message.
   }
 
   return (
