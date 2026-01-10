@@ -3,7 +3,7 @@
     {
       "id": "kunal-deo-avatar",
       "description": "A professional headshot of Kunal Deo.",
-      "imageUrl": "https://storage.googleapis.com/aif-stg-bucket/projects/1774906939627/c38a168a-a48f-4ae8-80ac-222a763c3734_vT4rfw.jpg",
+      "imageUrl": "https://storage.googleapis.com/aif-stg-bucket/projects/1774906939627/bbe6d99f-4318-4ac5-807a-c71510255a6d_vT4rfw.jpg",
       "imageHint": "professional headshot"
     },
     {
@@ -33,7 +33,7 @@
     {
       "id": "hero-background",
       "description": "A stunning view of snowy mountains under a starry night sky with the Milky Way visible.",
-      "imageUrl": "https://storage.googleapis.com/aif-stg-bucket/projects/1774906939627/bbe6d99f-4318-4ac5-807a-c71510255a6d_milky-way-2695569_1280.jpg",
+      "imageUrl": "https://storage.googleapis.com/aif-stg-bucket/projects/1774906939627/c38a168a-a48f-4ae8-80ac-222a763c3734_milky-way-2695569_1280.jpg",
       "imageHint": "starry mountains"
     }
   ]
