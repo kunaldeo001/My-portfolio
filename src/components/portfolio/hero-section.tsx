@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from 'next/link';
@@ -6,11 +5,10 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { heroData, portfolioData } from '@/lib/portfolio-data';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Mail } from 'lucide-react';
 
 export function HeroSection() {
-  const avatar = PlaceHolderImages.find((img) => img.id === 'kunal-deo-avatar');
+  const avatarUrl = "https://storage.googleapis.com/aif-stg-bucket/projects/1774906939627/c57c46bd-3453-4ff0-a7d5-d86b6694e2e2_D23_1012.jpg";
   
   return (
     <section id="home" className="relative flex items-center justify-center overflow-hidden bg-transparent pt-32 pb-20">
@@ -22,7 +20,7 @@ export function HeroSection() {
         >
           <div className="relative mx-auto mb-6 h-32 w-32">
             <Avatar className="h-full w-full border-4 border-primary/20 shadow-lg">
-              <AvatarImage src={avatar?.imageUrl} alt={portfolioData.name} data-ai-hint={avatar?.imageHint} />
+              <AvatarImage src={avatarUrl} alt={portfolioData.name} data-ai-hint="professional headshot" />
               <AvatarFallback>{portfolioData.name.charAt(0)}</AvatarFallback>
             </Avatar>
           </div>
