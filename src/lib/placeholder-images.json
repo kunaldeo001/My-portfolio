@@ -1,12 +1,6 @@
 {
   "placeholderImages": [
     {
-      "id": "kunal-deo-avatar",
-      "description": "A professional headshot of Kunal Deo.",
-      "imageUrl": "https://storage.googleapis.com/aif-stg-bucket/projects/1774906939627/c57c46bd-3453-4ff0-a7d5-d86b6694e2e2_D23_1012.jpg",
-      "imageHint": "professional headshot"
-    },
-    {
       "id": "project-1",
       "description": "Placeholder image for the first project.",
       "imageUrl": "https://images.unsplash.com/photo-1579389083395-4507e98b5e67?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx0ZWNoJTIwcHJvamVjdHxlbnwwfHx8fDE3NjU4MTAzMDd8MA&ixlib=rb-4.1.0&q=80&w=1080",

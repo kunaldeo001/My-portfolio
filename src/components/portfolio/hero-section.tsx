@@ -8,7 +8,7 @@ import { heroData, portfolioData } from '@/lib/portfolio-data';
 import { Mail } from 'lucide-react';
 
 export function HeroSection() {
-  const avatarUrl = "https://storage.googleapis.com/aif-stg-bucket/projects/1774906939627/c57c46bd-3453-4ff0-a7d5-d86b6694e2e2_D23_1012.jpg";
+  const avatarUrl = "https://picsum.photos/seed/kunal-deo-avatar/128/128";
   
   return (
     <section id="home" className="relative flex items-center justify-center overflow-hidden bg-transparent pt-32 pb-20">
