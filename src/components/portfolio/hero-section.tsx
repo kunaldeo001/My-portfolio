@@ -6,9 +6,10 @@ import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { heroData, portfolioData } from '@/lib/portfolio-data';
 import { Mail } from 'lucide-react';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function HeroSection() {
-  const avatarUrl = "https://picsum.photos/seed/kunal-deo-avatar/128/128";
+  const avatar = PlaceHolderImages.find((img) => img.id === 'user-profile-avatar');
   
   return (
     <section id="home" className="relative flex items-center justify-center overflow-hidden bg-transparent pt-32 pb-20">
@@ -20,7 +21,7 @@ export function HeroSection() {
         >
           <div className="relative mx-auto mb-6 h-32 w-32">
             <Avatar className="h-full w-full border-4 border-primary/20 shadow-lg">
-              <AvatarImage src={avatarUrl} alt={portfolioData.name} data-ai-hint="professional headshot" />
+              <AvatarImage src={avatar?.imageUrl} alt={portfolioData.name} data-ai-hint={avatar?.imageHint || 'man with motorcycle'} />
               <AvatarFallback>{portfolioData.name.charAt(0)}</AvatarFallback>
             </Avatar>
           </div>
