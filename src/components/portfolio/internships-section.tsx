@@ -28,7 +28,7 @@ export function InternshipsSection() {
               className={`mb-8 flex items-center ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}
             >
               <div className={`w-full lg:w-1/2 ${index % 2 === 0 ? 'lg:pr-8' : 'lg:pl-8'}`}>
-                <Card className="shadow-lg transition-shadow duration-300 hover:shadow-xl bg-card/80 backdrop-blur-sm">
+                <Card className="shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 bg-card/80 backdrop-blur-sm">
                   <div className="p-6">
                     <div className="flex justify-between items-start">
                       <div>

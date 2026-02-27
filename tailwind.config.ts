@@ -95,10 +95,19 @@ export default {
             height: '0',
           },
         },
+        'pulsate-shadow': {
+          '0%, 100%': {
+            boxShadow: '0 0 15px 0px hsl(var(--primary) / 0.4)',
+          },
+          '50%': {
+            boxShadow: '0 0 25px 5px hsl(var(--primary) / 0.4)',
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'pulsate-shadow': 'pulsate-shadow 4s ease-in-out infinite',
       },
     },
   },
