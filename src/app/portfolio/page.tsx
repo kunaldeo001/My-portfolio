@@ -26,7 +26,7 @@ export default function PortfolioPage() {
         className="fixed inset-0 z-0 bg-cover bg-center bg-fixed"
         style={{ backgroundImage: heroBgImage ? `url(${heroBgImage.imageUrl})` : 'none' }}
       ></div>
-      <div className="absolute inset-0 z-0 bg-background/80 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 z-0 bg-background/70 backdrop-blur-sm"></div>
       <div className="relative z-10">
         <Header />
         <main className="flex-1">

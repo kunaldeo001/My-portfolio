@@ -32,9 +32,9 @@
     },
     {
       "id": "hero-background",
-      "description": "A stunning view of snowy mountains under a starry night sky with the Milky Way visible.",
-      "imageUrl": "https://storage.googleapis.com/aif-stg-bucket/projects/1774906939627/c38a168a-a48f-4ae8-80ac-222a763c3734_milky-way-2695569_1280.jpg",
-      "imageHint": "starry mountains"
+      "description": "An aesthetic starry night sky background.",
+      "imageUrl": "https://images.unsplash.com/photo-1506443432602-ac2fcd6f54e0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "starry sky"
     }
   ]
 }
