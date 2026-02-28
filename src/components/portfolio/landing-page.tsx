@@ -23,16 +23,8 @@ export function LandingPage() {
   return (
     <section id="home" className="relative flex min-h-screen items-center justify-center overflow-hidden bg-background">
       {wallpaper && (
-        <motion.div
+        <div
           className="absolute z-0 h-full w-full"
-          initial={{ scale: 1 }}
-          animate={{ scale: 1.05 }}
-          transition={{
-            duration: 15,
-            ease: 'easeInOut',
-            repeat: Infinity,
-            repeatType: 'mirror',
-          }}
         >
           <Image
             src={wallpaper}
@@ -43,7 +35,7 @@ export function LandingPage() {
             data-ai-hint={heroBgImage?.imageHint}
             key={wallpaper}
           />
-        </motion.div>
+        </div>
       )}
       <div className="absolute inset-0 z-10 bg-background/60 backdrop-blur-sm"></div>
       

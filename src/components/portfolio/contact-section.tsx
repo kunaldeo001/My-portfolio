@@ -13,7 +13,7 @@ import { SectionWrapper, SectionHeading, SectionDescription } from "./section";
 import { contactData, portfolioData } from "@/lib/portfolio-data";
 import { useToast } from "@/hooks/use-toast";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
-import { Mail, Phone } from "lucide-react";
+import { Mail } from "lucide-react";
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
