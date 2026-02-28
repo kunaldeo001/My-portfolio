@@ -26,6 +26,12 @@ export function SkillsSection() {
         duration: 0.5,
       },
     }),
+    hover: {
+      y: -8,
+      scale: 1.05,
+      rotateY: 7,
+      transition: { type: "spring", stiffness: 400, damping: 20 }
+    }
   };
 
   return (
@@ -34,7 +40,7 @@ export function SkillsSection() {
         <SectionHeading>{skillsData.title}</SectionHeading>
         <SectionDescription className="mt-4">{skillsData.description}</SectionDescription>
       </div>
-      <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3 [perspective:1000px]">
         {skillsData.categories.map((category, index) => {
           const Icon = iconMap[category.title] || Code2;
           return (
@@ -45,8 +51,9 @@ export function SkillsSection() {
               whileInView="visible"
               viewport={{ once: true }}
               variants={cardVariants}
+              whileHover="hover"
             >
-              <Card className="flex h-full flex-col shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 bg-card/80 backdrop-blur-sm">
+              <Card className="flex h-full flex-col shadow-lg transition-shadow duration-300 hover:shadow-xl bg-card/80 backdrop-blur-sm">
                 <CardHeader className="flex-row items-center gap-4">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
                     <Icon className="h-6 w-6" />

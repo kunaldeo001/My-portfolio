@@ -20,7 +20,7 @@ export function ProjectsSection() {
         <SectionHeading>{projectsData.title}</SectionHeading>
         <SectionDescription className="mt-4">{projectsData.description}</SectionDescription>
       </div>
-      <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3 [perspective:1000px]">
         {projectsData.items.map((project, index) => {
           const projectImage = getProjectImage(project.image);
           return (
@@ -30,8 +30,9 @@ export function ProjectsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ y: -8, rotateY: 7, scale: 1.05, transition: { type: "spring", stiffness: 400, damping: 20 } }}
             >
-              <Card className="group flex h-full flex-col overflow-hidden shadow-lg transition-all duration-300 hover:shadow-primary/20 hover:shadow-2xl hover:-translate-y-2 bg-card/80 backdrop-blur-sm">
+              <Card className="group flex h-full flex-col overflow-hidden shadow-lg transition-shadow duration-300 hover:shadow-primary/20 hover:shadow-2xl bg-card/80 backdrop-blur-sm">
                 {projectImage && (
                   <div className="aspect-video overflow-hidden">
                     <Image
@@ -39,7 +40,7 @@ export function ProjectsSection() {
                       alt={project.title}
                       width={600}
                       height={400}
-                      className="h-full w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                      className="h-full w-full object-cover"
                       data-ai-hint={projectImage.imageHint}
                     />
                   </div>
