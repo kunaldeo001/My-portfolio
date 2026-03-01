@@ -17,6 +17,7 @@ export function EducationSection() {
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
+        whileHover={{ y: -8, scale: 1.03, transition: { type: "spring", stiffness: 400, damping: 20 } }}
         className="mt-12"
       >
         <Card className="max-w-3xl mx-auto shadow-lg bg-transparent">
