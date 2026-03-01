@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 # Next.js & ShadCN Portfolio Website
 
 This is a personal portfolio website built with Next.js, React, ShadCN UI, and Tailwind CSS. It's designed to be a modern, responsive, and customizable showcase of projects, skills, and experience.
+=======
+# HLO GUYS
+
+
+>>>>>>> 73613f46dd9c08c889232d76bac37aac660f4c13
 
 ## Tech Stack
 
