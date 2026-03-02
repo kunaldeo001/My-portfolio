@@ -117,6 +117,26 @@ export const projectsData = {
         github: 'https://github.com/kunaldeo001/responsive-landing-page',
         live: null,
       },
+    },
+    {
+      title: 'Daily Dynamo',
+      description: 'A whimsical and interactive day planner designed to spark joy and boost productivity through AI-driven insights and focused tools.',
+      image: 'project-5',
+      tags: ['Next.js', 'React', 'AI', 'Tailwind CSS', 'TypeScript'],
+      links: {
+        github: 'https://github.com/kunaldeo001/daily-dynamo',
+        live: null,
+      },
+    },
+    {
+      title: 'Procto Vision',
+      description: 'An AI-powered proctoring tool to conduct safe tests and detect any kind of malpractice during online assessments.',
+      image: 'project-6',
+      tags: ['Python', 'OpenCV', 'AI', 'Machine Learning', 'Flask'],
+      links: {
+        github: 'https://github.com/kunaldeo001/procto-vision',
+        live: null,
+      },
     }
   ],
 };
@@ -239,4 +259,5 @@ export const contactData = {
         submit: "Send Message",
     },
 };
+
 
