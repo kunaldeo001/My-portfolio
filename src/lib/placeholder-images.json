@@ -21,7 +21,7 @@
     {
       "id": "project-3",
       "description": "Placeholder image for the third project.",
-      "imageUrl": "https://images.unsplash.com/photo-1753998943413-8cba1b923c0e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjb2RlJTIwc2NyZWVufGVufDB8fHx8MTc2NTg1MTE5MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1080&auto=format&fit=crop",
       "imageHint": "code screen"
     },
     {
@@ -33,14 +33,14 @@
     {
       "id": "project-5",
       "description": "Placeholder image for the Daily Dynamo project.",
-      "imageUrl": "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhYnN0cmFjdCUyMHBhdHRlcm58ZW58MHx8fHwxNzY1OTYyMjU0fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "abstract productivity"
+      "imageUrl": "https://images.unsplash.com/photo-1516528387618-afa90b13e000?q=80&w=1080&auto=format&fit=crop",
+      "imageHint": "planner desk"
     },
     {
       "id": "project-6",
       "description": "Placeholder image for the Procto Vision project.",
-      "imageUrl": "https://images.unsplash.com/photo-1554493393-9993e5e8e353?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjeWJlciUyMGV5ZXxlbnwwfHx8fDE3NjU5NjIzMTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "AI vision"
+      "imageUrl": "https://images.unsplash.com/photo-1526374965328-7b61a4dc92f2?q=80&w=1080&auto=format&fit=crop",
+      "imageHint": "data stream"
     },
     {
       "id": "hero-background",
