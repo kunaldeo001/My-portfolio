@@ -6,7 +6,6 @@ This is a personal portfolio website built with Next.js, React, ShadCN UI, and T
 
 
 
->>>>>>> 73613f46dd9c08c889232d76bac37aac660f4c13
 
 ## Tech Stack
 
