@@ -137,6 +137,26 @@ export const projectsData = {
         github: 'https://github.com/kunaldeo001/procto-vision',
         live: null,
       },
+    },
+    {
+      title: 'FoodFetch',
+      description: 'A food ordering application that allows users to browse restaurants and order meals online.',
+      image: 'project-7',
+      tags: ['React', 'Node.js', 'Express', 'MongoDB'],
+      links: {
+        github: 'https://github.com/kunaldeo001/food-fetch',
+        live: null,
+      },
+    },
+    {
+      title: 'Aura Ecommerce',
+      description: 'A modern e-commerce platform for fashion, featuring product listings, a shopping cart, and a checkout process.',
+      image: 'project-8',
+      tags: ['Next.js', 'Stripe', 'Tailwind CSS', 'TypeScript'],
+      links: {
+        github: 'https://github.com/kunaldeo001/aura-ecommerce',
+        live: null,
+      },
     }
   ],
 };
@@ -259,5 +279,3 @@ export const contactData = {
         submit: "Send Message",
     },
 };
-
-
