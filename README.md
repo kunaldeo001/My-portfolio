@@ -22,7 +22,7 @@ This is a personal portfolio website built with Next.js, React, ShadCN UI, and T
 
 To get a local copy up and running, follow these simple steps.
 
-### Prerequisites
+#### Prerequisites
 
 You need to have [Node.js](https://nodejs.org/en/) (version 18.x or later) and npm installed on your machine.
 
