@@ -47,7 +47,7 @@ You need to have [Node.js](https://nodejs.org/en/) (version 18.x or later) and n
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Key Features
+### Key Features
 
 - **Modern Design**: A clean and aesthetic UI built with ShadCN and Tailwind CSS.
 - **Fully Responsive**: Looks great on all devices, from mobile phones to desktops.
