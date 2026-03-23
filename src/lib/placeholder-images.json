@@ -3,8 +3,8 @@
     {
       "id": "user-profile-avatar",
       "description": "Kunal Deo's profile picture.",
-      "imageUrl": "https://storage.googleapis.com/aif-stg-bucket/projects/1774906939627/b3d4f829-166c-4876-857e-128a3c8e4414_kunal-deo-on-bike.jpg",
-      "imageHint": "man motorcycle"
+      "imageUrl": "/images/profile.jpg",
+      "imageHint": "man wearing suit"
     },
     {
       "id": "project-1",
